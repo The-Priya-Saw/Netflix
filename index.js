@@ -55,11 +55,34 @@ function fetchAndBuildMoviesSection(fetchUrl, categoryName) {
         .then(res => {
             console.table(res.results);
             const movies = res.results;
+            if (categoryName === "Trending Now") {
+                setInterval(()=>changingBanner(movies),10000);
+            }
             if (Array.isArray(movies) && movies.length) {
                 buildMoviesSection(movies, categoryName);
             }
         })
         .catch(err => console.error(err));
+}
+
+function changingBanner(movies) {
+    const len = movies.length - 1;
+    const randomIndex = Math.round(Math.random() * len);
+    const banner = document.getElementById("banner");
+    const randomMovie = movies[randomIndex];
+    const bannerImagePath = `${imgPath}${randomMovie.backdrop_path}`
+    
+    // Setting Banner Image
+    banner.style.backgroundImage = `url(${bannerImagePath})`;
+
+    // fetching Banner title
+    const bannerTitle = banner.querySelector(".bannerTitle");
+    bannerTitle.innerHTML = randomMovie.name || randomMovie.title;
+
+    // fetching banner overview
+    const bannerOverview = banner.querySelector(".bannerOverview");
+    bannerOverview.innerHTML = randomMovie.overview;
+    console.log("Trending Stuff", randomMovie , banner);
 }
 
 function buildMoviesSection(list, categoryName) {
@@ -85,7 +108,7 @@ function buildMoviesSection(list, categoryName) {
 
     console.log(moviesSectionHTML);
 
-    
+
 
     const div = document.createElement('div');
     div.className = "moviesSection"
