@@ -1,0 +1,92 @@
+.html,body{
+    background-color: #141414;
+    padding: 0;
+    margin: 0;
+    width:100%  
+}
+
+img{
+    height: 50px;
+    margin: 40px;
+    padding: 5px;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+}
+
+.signInButton{
+    background-color: #e50914;
+    float: right;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: normal;
+    padding: 7px 17px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    margin-top: .5rem;
+    cursor: pointer;
+    margin: 40px;
+    height: 40px;
+    width: 110px;
+    text-decoration: none;
+    
+}
+
+.our-story-card-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+
+.our-story-card-title{
+    font: 50px "Netflix sans", "Helvetica neue";
+    font-size: 60px
+}
+
+.our-story-card-subtitle{
+    font-size: 40px;
+}
+
+.email-form-title{
+    font-weight: 400;
+    margin-bottom: 20px;
+    max-width: 450px;
+    padding: 0 5%;
+    font-size: 25px;
+}
+
+.emailId{
+    height: 25px;
+    width: -webkit-fill-available;
+    border: none;
+    border-radius: 2px;
+    padding: 20px 20px 20px;
+
+}
+
+.getStartedButton{
+
+    background-color: #e50914;
+    float: right;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 7px 17px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    margin: 20px;
+    height: 40px;
+    width: 160px;
+    text-decoration: none;
+
+}

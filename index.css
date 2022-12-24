@@ -1,0 +1,215 @@
+/* normalize css */
+html,body{
+    background-color: #141414;
+    padding: 0;
+    margin: 0;
+    font-family: Melvetica, Arial, sans-serif;
+}
+
+.container{
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+/* Header css */
+header{
+    background-color: transparent;
+    position: fixed;
+    z-index:100;
+    left: 0;
+    top:0;
+    width: 100%;
+}
+
+.headerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+}
+
+.headerBrand{
+    max-width: 110px;
+
+}
+
+.main-nav{
+    list-style: none;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+}
+
+.nav-item{
+    margin-right: 20px;
+    color: white;
+    font-size: 20px;
+    
+}
+
+.nav-item-active{
+    color: white;
+    margin-right:22px;
+    opacity: 1;
+    font-weight: 600;
+    font-size: 20px;
+
+}
+
+.leftContainer, .rightContainer {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rightContainer svg , .rightContainer img{
+    color: white;  
+    margin-right: 22px;  
+    max-width: 36px;
+    cursor:pointer;
+}
+
+
+/* movie section css */
+.movieContainer{
+
+}
+
+.movieSection{
+
+}
+
+.movieSectionHeading{
+font-size: 20px;
+font-weight: 700;
+line-height: 1.2;
+color: white;
+cursor: pointer;
+margin-bottom: 10px;
+
+}
+
+.movieSectionHeading:hover .exploreNudge{
+    display: inline-block;
+}
+
+.movieRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+   
+}
+*::-webkit-scrollbar{
+    display:none;
+}
+.movieItem{
+width:245px ;
+object-fit: contain;
+margin-right: 6px;
+border-radius: 4px;
+
+
+}
+
+.movieItem:hover{
+  transform: scale(1.3);
+    transition: transform ease 800ms;
+    cursor: pointer;
+
+}
+
+.exploreNudge{
+    color: #54b9c5;
+    font-size: 12px;
+    display: none;
+
+}
+
+
+/* banner css starts here */
+.bannerSection{
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+    padding-top: 80px;
+    position: relative;
+}
+
+.bannerContent{
+    display:flex;
+    flex-direction: column;
+   padding-top: 70px;
+
+}
+
+.bannerTitle{
+
+    color: white;
+    font-size: 78px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.bannerInfo{
+    margin-bottom: 14px;
+    font-size: 22px;
+    font-weight: 700;
+   line-height: 1.5;
+}
+
+.bannerOverview {
+    font-size: 16.4px;
+    color: white;
+    line-height: 1.3;    
+}
+
+.actionButtonContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+
+}
+
+.playButton , .moreInfoButton{
+    border: none;
+    background-color: white;
+    padding: 15px 23px;
+    margin: 11px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.moreInfoButton {
+    background-color: white;
+    opacity: 80%;
+}
+
+.bannerGradient{
+    height: 120px;
+    background: linear-gradient(180deg, transparent ,rgba(37,37,37,.61) #141414);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+}
+
+/* RESPONSIVE CSS */
+
+@media(max-width:767px){
+    .main-nav{
+        display: none;
+
+    }
+}
+
