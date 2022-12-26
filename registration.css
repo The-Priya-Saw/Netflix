@@ -1,0 +1,44 @@
+body{
+    background: #fff;
+    min-width: 320px;
+    margin: 0px;
+ 
+}
+
+img{
+    height: 45px;
+   margin: 18px;
+    padding: 5px;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: rgba(128, 128, 128, 0.313) solid 1px;
+}
+
+.signInButton {
+  margin: 18px;
+    background: transparent;
+    border: 0px;
+    text-decoration: none;
+    color: black;
+    font-size: 23px;
+
+}
+
+.a{
+    text-decoration: none;
+}
+
+.registrationContainer{
+
+    display: block;
+    margin: 0 auto;
+    max-width: 440px;
+    text-align: left;
+   
+
+
+}
