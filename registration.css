@@ -9,6 +9,7 @@ img{
     height: 45px;
    margin: 18px;
     padding: 5px;
+    cursor: pointer;
 }
 
 .navbar{
@@ -28,17 +29,105 @@ img{
 
 }
 
-.a{
+.signInLink{
     text-decoration: none;
+    color: black;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.signInLink:hover{
+    text-decoration: underline;
+    color: black;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 .registrationContainer{
 
     display: block;
     margin: 0 auto;
+    margin-top: 40px;
     max-width: 440px;
     text-align: left;
    
+}
 
+.stepIndicator{
+    color: #333333;
+    font-size: 13px;
+}
 
+.stepTitle{
+    color: #333333;
+    font-size: 32px;
+    font-family: "Netflix sans" , "Helvetic neue", "Sans sherif";
+}
+
+p{
+    color: #333333;
+    font-size: 18px;
+    font-family: "Netflix sans" , "Helvetic neue", "Sans sherif";
+}
+
+.passwordContainer{
+    color: #333333;
+    font-size: 16px;
+    padding: 10px 0px;
+    margin: 10px;
+    margin-left: 0;   
+}
+
+.enterPasswordBox{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #8c8c8c;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #000;
+    display: block;
+    font-size: 16px;
+    height: 60px;
+    padding: 10px 11px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.inputError{
+    color: #b92d2b;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+a{
+    color: #0071eb;
+    text-decoration: none;
+    font-weight: 200px;
+    font-size: 16px;
+
+}
+
+a:hover{
+    text-decoration: underline;
+    font-size:17px ;
+}
+
+.nextButton{
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: 400;
+    min-height: 64px;
+    width: 100%;
+    color: white;
+    background-color: #e50914;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+
+}
+
+.nextButton:hover{
+    background-color: #ff0b18;
 }

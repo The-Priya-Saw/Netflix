@@ -1,0 +1,201 @@
+body{
+  background: #fff;
+  min-width: 320px;
+  margin: 0px;
+  /* font-family: 'Nunito Sans', sans-serif; */
+  font-family: 'Roboto', sans-serif;
+
+}
+
+img{
+  height: 45px;
+ margin: 18px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.wrapper{
+  max-width: 965px;
+  margin: 10px auto;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: rgba(128, 128, 128, 0.313) solid 1px;
+}
+
+.signOutButton {
+margin: 18px;
+  background: transparent;
+  border: 0px;
+  text-decoration: none;
+  color: black;
+  font-size: 23px;
+
+}
+
+.signOutLink{
+  text-decoration: none;
+  color: black;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.signOutLink:hover{
+  text-decoration: underline;
+  color: black;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.registrationContainer{
+
+  /* display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 440px;
+  text-align: left; */
+
+  
+}
+
+.stepIndicator{
+  color: #333333;
+  font-size: 13px;
+}
+
+.stepTitle{
+  color: #333333;
+  font-size: 32px;
+  /* font-family: "Netflix sans" , "Helvetic neue", "Sans sherif"; */
+}
+
+p{
+  color: #333333;
+  font-size: 18px;
+  /* font-family: "Netflix sans" , "Helvetic neue", "Sans sherif"; */
+}
+
+.checkmark-group--icon{
+  color:#e50914 ;
+  
+} 
+.mobilePlan, .basicPlan, .standardPlan, .premiumPlan{
+
+  background: #e50914;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 auto;
+  opacity: .6;
+  padding: 25px;
+  text-align: center; 
+  display: block;
+  /* height: 70px; */
+  width: 70px;
+}
+
+.plansOptionsContainer{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.plansOptions{
+  display: flex;
+  /* flex-direction: row;
+  justify-content: flex-end;
+  align-items: center; */
+
+}
+
+.plan{
+  margin: 0 15px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    width: 75px;
+}
+
+span.b{
+ display: block;
+align-items: center;
+}
+
+.plansTable{
+  width: 100%;
+}
+
+.plansTable  tr > td{
+  width: 100px;
+  text-align: center;
+}
+.plansTable  tr > td:first-child{
+  /* background-color: red; */
+  width: 35%;
+}
+
+.plansTable td{
+  /* background-color: red; */
+  height: 70px;
+  fill: #737373;
+    color: #737373;
+    font-weight: 700;
+}
+
+tbody{
+  margin-bottom: 20px;
+}
+
+.description{
+  margin: 20px 0;
+  fill: #737373;
+    color: #737373;
+    font-weight: 500;
+
+}
+
+th{
+  width: 220px;
+}
+
+.nextButtonContainer{
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nextButton{
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: 400;
+  min-height: 64px;
+  width: 60%;
+  color: white;
+  background-color: #e50914;
+  border: none;
+  margin-top: 30px;
+  cursor: pointer;
+
+}
+
+.nextButton:hover{
+  background-color: #ff0b18;
+  
+}
+
+footer{
+  width: 100%;
+  height: 200px;
+  background-color:#f0efef;
+}
+
+

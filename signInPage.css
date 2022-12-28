@@ -1,0 +1,97 @@
+.html,body{
+
+  /* background-image:url("homePageImage.jpg"); */
+    padding: 0;
+    margin: 0;
+    width:100%;
+    height: 100%;
+}
+
+img{
+    height: 38px;
+    margin: 40px;
+    padding: 5px;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.signInContainer{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+    margin: 30px;
+    padding: 50px;
+    backdrop-filter: brightness(0.5);
+}
+
+.emailInput, .passwordInput{
+    border: 1px solid #333;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #000;
+    display: block;
+    font-size: 16px;
+    height: 54px;
+    margin-bottom: 30px;
+    background-color: #333;
+    padding: 15px;
+    
+}
+
+.emailContainer, .passwordContainer{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.signInButton{
+
+    
+        background-color: #e50914;
+        font-size: larger;
+        font-weight: 500px;
+        height: 50px;
+        border: none;
+        border-radius: 3px;
+        color: white;
+        cursor: pointer;
+
+        
+
+    
+}
+
+.signInButtonContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+
+
