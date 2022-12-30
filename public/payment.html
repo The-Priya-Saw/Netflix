@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="payment.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+    <script src="./payment.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <img class="logo"
+                src="https://th.bing.com/th/id/R.715e69176d3cec74504b3ae00f2676c6?rik=vGDJl%2bfFL64qmw&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f4%2fNetflix-Logo-HD.png&ehk=aWIF5J5TR6tD4IrfNFhXE0dNVq%2f6n%2f6OViRGEsRS%2bNg%3d&risl=&pid=ImgRaw&r=0"
+                alt="">
+
+            <button class="signOutButton"><a href="" class="signOutLink">Sign Out </a></button>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="paymentContainer">
+            <div class="stepIndicator">
+                STEP <b>3 </b> OF <b>3</b>
+            </div>
+
+            <h1 class="stepTitle">Choose how to pay
+            </h1>
+
+            <div id="" class="paymentDescription">Your payment is encrypted and you can change <br /> how you pay
+                anytime.</div>
+
+            <div class="paymentTitle"><b>Secure for peace of mind.<br>
+                    Cancel easily online.</b>
+            </div>
+
+        </div>
+
+        <div class="paymentForm">
+            <form method="POST">
+                <h4>Account</h4>
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="text" placeholder="First Name" required class="firstName name">
+                        <i class="fa fa-user icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="Last Name" required class="lastName name">
+                        <i class="fa fa-user icon"></i>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="email" placeholder="Email Adress" required class="paymentEmailId name">
+                        <i class="fa fa-envelope icon"></i>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <button class="paymentSubmitButton" id="rzp-button1" type="button">PAY NOW</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+</div>
+
+
+
+</body>
+
+</html>
