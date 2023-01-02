@@ -37,13 +37,11 @@
         <p>Enter your password and you'll be watching in no time.</p>
 
         <form action="" class="password">
-            <div class="passwordContainer">
-
-                Email <br />
-                <b>priyasaw245@gmail.com</b>
+            <div>
+                <input type="email" class="enterPasswordBox emailInput" placeholder="Enter your email">
             </div>
             <div>
-                <input type="password" class="enterPasswordBox" placeholder="Enter your password">
+                <input type="password" class="enterPasswordBox passwordInput" placeholder="Enter your password">
             </div>
 
             <div id="" class="inputError" data-uia="field-password+error"><b>Password is required.</b></div>
@@ -54,7 +52,7 @@
             </div>
 
             <div class="">
-                <button type="submit" class="nextButton"> Next</button>
+                <button type="button" class="nextButton"> Next</button>
             </div>
 
 
@@ -65,7 +63,40 @@
 
     </div>
 
+    <script>
+        const emailInput = document.querySelector(".emailInput");
+        const passwordInput = document.querySelector(".passwordInput");
+        const nextButton = document.querySelector(".nextButton");
 
+        nextButton.addEventListener("click", (event) => {
+            signUp(emailInput.value,passwordInput.value);
+        });
+
+        async function signUp(email, password){
+            const response = await fetch("/api/signup",{
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({email: email, password: password})
+            });
+
+            if(response.status === 400){
+                alert("Email already exist");
+            }else{
+                const json = await response.json();
+                console.log(json);
+                sessionStorage.setItem("user", JSON.stringify(json))
+                location.href = "/plans";
+            }
+
+
+            
+        }
+            //get the email value stored in session storage by using this syntax
+        const email = sessionStorage.getItem("email");   
+        if(email){
+            emailInput.value = email;
+        }
+    </script>
 </body>
 
 </html>

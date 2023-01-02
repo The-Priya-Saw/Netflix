@@ -76,8 +76,46 @@
 
     </div>
 
+    <script>
+        const emailInput = document.querySelector(".emailInput");
+        const passwordInput = document.querySelector(".passwordInput");
+        const signInButton = document.querySelector(".signInButton");
 
-   
+        signInButton.addEventListener("click", (event) => {
+            const emailValue = emailInput.value;
+            const passwordValue = passwordInput.value;
+            logIn(emailValue,passwordValue);
+            console.log(emailValue, passwordValue);
+            event.preventDefault();
+        });
+
+        async function logIn(email, password){
+            const response = await fetch("/api/login",{
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                }, 
+                body: JSON.stringify({ 
+                    email,
+                    password
+                })
+            });
+
+            if(response.status === 400){
+                alert("Invalid Email / Password");
+                return;
+            }else{
+                const userJson = await response.json();
+                sessionStorage.setItem("user",userJson);
+                location.href = "/";
+            }
+            
+            
+
+
+        }
+    </script>
+
 
 
 

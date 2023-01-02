@@ -1,5 +1,12 @@
 const order = JSON.parse(sessionStorage.getItem("order"));
 console.log(order);
+const user = JSON.parse(sessionStorage.getItem("user"));
+
+document.querySelector("#paymentEmailId").innerText = user.email;
+document.querySelector("#planPrice").innerText = parseInt(order.amount) / 100;
+document.querySelector("#planName").innerText = order.plan;
+
+
 
 // Destructing Syntax for object
 // const id = order.id; const amount = order.amount; const plan = order.plan;
@@ -24,14 +31,14 @@ var options = {
     }
 };
 
-const emailInput = document.querySelector(".paymentEmailId");
+// const emailInput = document.querySelector(".paymentEmailId");
 const customerFirstName = document.querySelector(".firstName");
 const customerLastName = document.querySelector(".lastName");
 const payButton = document.getElementById("rzp-button1");
 
 
 payButton.addEventListener("click", (event) => {
-    const customerEmailId = emailInput.value;
+    const customerEmailId = user.email;
     const customerFullName = customerFirstName.value + " " + customerLastName.value;
     console.log(customerEmailId, customerFullName);
     
@@ -40,7 +47,6 @@ payButton.addEventListener("click", (event) => {
     console.log(options);
     var rzp1 = new Razorpay(options);
     rzp1.open();
-    console.log("clicked on pay button");
     event.preventDefault();
 })
 

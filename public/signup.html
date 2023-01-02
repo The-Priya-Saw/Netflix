@@ -52,6 +52,23 @@
 
     </div>
 
+    <script>
+       const email = document.querySelector(".emailId");
+       const startButton = document.querySelector(".getStartedButton");
+
+       startButton.addEventListener("click" , (event) => {
+          console.log(email.value);
+          sessionStorage.setItem("email", email.value);
+
+          //redirect the signup page to regitration page by using below syntax
+          location.href = "/registration";
+
+          //prevent the automatic loading of the page.
+          event.preventDefault();
+       })
+
+    </script>
+
 
     
 
