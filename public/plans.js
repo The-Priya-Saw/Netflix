@@ -27,16 +27,26 @@ nextButton.addEventListener("click", (event) => {
 })
 
 // get elements with the classname plan
-Array.from(allPlanSpan).forEach(element => {                      // converting fetched elements in form of array since it is not in arr
+Array.from(allPlanSpan).forEach(element => {  // converting fetched elements in form of array since it is not in arr
     element.addEventListener("click", (event) => {
 
         //adding click event on all element in arr
-        const selectPlanSpan = document.querySelector(".selected");
-        selectPlanSpan.classList.remove("selected");
+        const activePlan = document.querySelectorAll(".selected");
+        Array.from(activePlan).forEach(element => {
+            element.classList.remove("selected");
+        })
+        // mobileCell.classList.remove("selected");
         
         
         event.target.classList.add("selected");
         const planName = event.target.classList[0];
+        const cellClass = planName+"Cell";
+        const cells = document.querySelectorAll(`.${cellClass}`);
+        Array.from(cells).forEach(element => {
+            element.classList.add("selected");
+        });
+
+
         const orderAmount = parseInt(document.querySelector(`table .${planName}`).innerText);
         console.log(orderAmount);
         planObject.amount = orderAmount;

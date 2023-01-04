@@ -69,6 +69,10 @@ body{
     text-align: center;
 }
 
+.paymentForm{
+ width: 30%;
+}
+
 .paymentDescription{
 font-size: 18px;
 margin: 10px;
@@ -79,24 +83,23 @@ margin: 10px;
     font-size: 19px;
 }
 
-
-  /* .wrapper{
-    background-color: #fff;
-    width: 500px;
-    padding: 25px;
-    margin: 25px auto 0;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
-  }
-  .wrapper h2{
-    background-color: #fcfcfc;
-    color: #7ed321;
-    font-size: 24px;
-    padding: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    border: 1px dotted #333;
-   } */
+.details{
+  background-color:#c0bfbf;
+  padding: 15px;
+  border: none;
+  border-radius: 2px;
   
+}
+.email {
+  border-bottom: rgb(123, 118, 118) solid 1px;
+}
+
+small{
+  color: #676464;
+  font-size: 1 rem;
+}
+
+
   h4{
     padding-bottom: 5px;
     color: #e50914;
@@ -159,16 +162,7 @@ margin: 10px;
     border: none;
     transition: 1s;
   }
-  .dob{
-    width: 30%;
-    padding: 14px;
-    text-align: center;
-    background-color: #fcfcfc;
-    transition: 0.3s;
-    outline: none;
-    border: 1px solid #c0bfbf;
-    border-radius: 3px;
-  }
+  
   .radio{
     display: none;
   }

@@ -53,16 +53,7 @@ margin: 18px;
   cursor: pointer;
 }
 
-.registrationContainer{
 
-  /* display: block;
-  margin: 0 auto;
-  margin-top: 40px;
-  max-width: 440px;
-  text-align: left; */
-
-  
-}
 
 .stepIndicator{
   color: #333333;
@@ -199,10 +190,19 @@ footer{
   background-color:#f0efef;
 }
 
-.selected{
+span.selected{
 
-  border: 5px solid rgb(60, 1, 1);
+ opacity: 1;
 
 }
 
+td.selected{
+  color: #e50914 ;
+
+}
+
+
+.deviceSelected{
+   
+}
 

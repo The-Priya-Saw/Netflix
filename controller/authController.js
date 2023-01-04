@@ -5,7 +5,16 @@ module.exports.signup = async (req, res) => {
     const emailId = req.body.email;
     const password = req.body.password;
 
+
+
     try {
+        if(emailId.length < 5){
+            throw new Error("Please enter a valid email");
+        }
+        if(password.length < 6){
+            throw new Error("Please enter a valid password");
+        }
+
         const user = await UserModel.create({
             email: emailId,
             password: password
@@ -51,4 +60,10 @@ module.exports.login = async (req, res) => {
         console.log("Invalid email or password");
         res.status(400).send({error: "Invalid email or passwod"});
     }
+}
+
+
+module.exports.signout = (req, res) => {
+    req.session = null;
+    res.redirect("/signInPage");
 }

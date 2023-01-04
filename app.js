@@ -32,8 +32,7 @@ app.use(cookieSession({
 app.use(express.urlencoded({extends: true}));
 app.use(express.static(__dirname +  "/public"));
 
-app.get("/",async (req, res) => {
-  console.log("happy new year");
+const proctectedHomeController = async (req, res) => {
   if(req.session && req.session.jwt){
     console.log(req.session.jwt);
     //data stored to session is decrypted using secret key stored in .env file.
@@ -56,7 +55,12 @@ app.get("/",async (req, res) => {
     res.redirect("/signInPage");
   }
   
-});
+}; 
+
+app.get("/",proctectedHomeController);
+app.get("/home", proctectedHomeController);
+
+
 
 
 // Routes

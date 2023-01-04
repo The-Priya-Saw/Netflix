@@ -121,5 +121,15 @@ function buildMoviesSection(list, categoryName) {
 }
 
 window.addEventListener('load', function () {
+    window.addEventListener("scroll", () => {
+        const landing = document.querySelector(".landing");
+        if(landing.scrollTop > 0){
+            this.alert("S")
+
+            document.querySelector("header").style.backgroundColor = "black";
+        }
+    });
     init()
+
 }) 
+

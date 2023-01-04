@@ -14,63 +14,63 @@
 
 </head>
 
-<body background="https://assets.nflxext.com/ffe/siteui/vlv3/5e48e7b6-350d-48d9-96d6-de8ca173c89f/fbb54774-ca17-4208-a995-db44bffe4163/IN-en-20221219-popsignuptwoweeks-perspective_alpha_website_large.jpg">
+<body
+style="background-image: url(homePageImage.jpg);">
 
- 
 
-  <!-- <body background-image="homePageImage"> -->
-    
+
+    <!-- <body background-image="homePageImage"> -->
+
     <div class="container">
 
 
         <div class="navbar">
-            <img class= "logo" src="https://th.bing.com/th/id/R.715e69176d3cec74504b3ae00f2676c6?rik=vGDJl%2bfFL64qmw&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f4%2fNetflix-Logo-HD.png&ehk=aWIF5J5TR6tD4IrfNFhXE0dNVq%2f6n%2f6OViRGEsRS%2bNg%3d&risl=&pid=ImgRaw&r=0"
+            <img class="logo"
+                src="https://th.bing.com/th/id/R.715e69176d3cec74504b3ae00f2676c6?rik=vGDJl%2bfFL64qmw&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f4%2fNetflix-Logo-HD.png&ehk=aWIF5J5TR6tD4IrfNFhXE0dNVq%2f6n%2f6OViRGEsRS%2bNg%3d&risl=&pid=ImgRaw&r=0"
                 alt="">
 
             <button class="signInButton"><a href="">Sign In </a></button>
 
         </div>
 
-        <div class="our-story-card-text">
-            <h1 id="" class="our-story-card-title">Unlimited movies, TV shows and more.</h1>
-            <h2 id="" class="our-story-card-subtitle" >Watch anywhere. Cancel anytime.
-            </h2>
-           
-            <form class="email-form" method="GET">
-                <h3 class="email-form-title">Ready to watch? Enter your email to create or restart your membership.</h3>
-                <div class="emailContainer">
-                            <input type="email" name="email" class="emailId"
-                                            maxlength="50" minlength="5" placeholder="Email address">
-                            
-                
+        <div class="title">
+            <div class="content">
+                <h1>Unlimited movies, TV shows and more.</h1>
+                <h2>Watch anywhere. Cancel anytime.</h2>
+                <form action="#">
+                    <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
+                <div class="email">
+                    <input type="email" class="emailId" placeholder="Email address">
+
             </form>
 
-            <button class="getStartedButton"> Get Started > </button> </div>
-            </div>
+            <button class="getStartedButton"> Get Started > </button>
         </div>
+    </div>
+    </div>
 
 
     </div>
 
     <script>
-       const email = document.querySelector(".emailId");
-       const startButton = document.querySelector(".getStartedButton");
+        const email = document.querySelector(".emailId");
+        const startButton = document.querySelector(".getStartedButton");
 
-       startButton.addEventListener("click" , (event) => {
-          console.log(email.value);
-          sessionStorage.setItem("email", email.value);
+        startButton.addEventListener("click", (event) => {
+            console.log(email.value);
+            sessionStorage.setItem("email", email.value);
 
-          //redirect the signup page to regitration page by using below syntax
-          location.href = "/registration";
+            //redirect the signup page to regitration page by using below syntax
+            location.href = "/registration";
 
-          //prevent the automatic loading of the page.
-          event.preventDefault();
-       })
+            //prevent the automatic loading of the page.
+            event.preventDefault();
+        })
 
     </script>
 
 
-    
+
 
 </body>
 
