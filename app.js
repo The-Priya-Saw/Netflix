@@ -12,7 +12,7 @@ const bodyParser = require("body-parser");
 const env = require("dotenv");
 const fs = require("fs");
 env.config();
-const port = process.env.port | 3000;
+const port = process.env.PORT | 3000;
 const cookieSession = require("cookie-session");
 const jwt = require("jsonwebtoken");
 const app = express();
