@@ -8,6 +8,7 @@
 //listener
 
 const express = require("express");
+const bodyParser = require("body-parser");
 const env = require("dotenv");
 const fs = require("fs");
 env.config();
@@ -29,7 +30,7 @@ app.use(cookieSession({
   signed: false,
   secure: false
 })); 
-app.use(express.urlencoded({extends: true}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname +  "/public"));
 
 const proctectedHomeController = async (req, res) => {
@@ -69,7 +70,9 @@ app.use(paymentRouter);
 app.use(authRoute);
 
 
-const mongodbUrl = "mongodb+srv://priya_saw:rpV8aZjDBt46dWBb@cluster0.lw1ofgj.mongodb.net/?retryWrites=true&w=majority";
+// const mongodbUrl = "mongodb+srv://priya_saw:rpV8aZjDBt46dWBb@cluster0.lw1ofgj.mongodb.net/?retryWrites=true&w=majority";
+
+const mongodbUrl = "mongodb://netflix-db:4sKZXS9DvkSHhs9OHZs9hOM6UV4IPqq7Y05tDlpMvwWSIcw8pQa1zs1qKmL8HEfvYp4lC7w9AwLQACDbfsnu6Q==@netflix-db.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@netflix-db@";
 
 mongoose.connect(mongodbUrl,(error) => {
   if(error){
