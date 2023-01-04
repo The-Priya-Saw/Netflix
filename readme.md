@@ -196,5 +196,49 @@ module.exports.login_post= (req, res) => {
 6) now import that controller file in authroute.js and call the functions of auth controller in router.get and router.post 
 
 
+___________________________________________________________________________________________________________________
+
+DEPLOY APP USING AZURE COSMOS DB :
+
+1.  in config file, set the remote url and local url.
+
+eg. module.exports = {
+    remoteUrl : "paste link here",
+    localUrl: "link"
+};
+
+2. open azure portal, search for azure cosmo db and select azure cosmo. it will open the cosmo db dashboard
+
+3. click on add button, and do all the configurations and clck on create button
+
+4. now click on resources, u will be able to see all the details of your db and then click on connection string
+
+5. go to connection string, copy the primary connection string and use as environment variable
+
+6. mongoose.connect(process.env.CUSTOMCONNSTR_MyConnectionString || database.localURl);
+
+7. here CUSTOMCONNSTR is the env variable provided by azure and MyConnectionString is the variable which we will declare on azure
+
+8. push the changes to git
+
+9. now go to app services of azure
+
+10. click on add, then select web app, enter all details and click on create. 
+
+11. now go to resources which u created and click on deployment options
+
+12. select github,enter required details and click on ok.
+
+13. now go to application settings, go to connection string, enter "MyConnectionString" as key
+
+14. paste primary connection string as value and choose custom string then save it
+
+15. go to overview. and ur app is deployed. click on data explorer to see the collections of data of ur app  
+
+
+
+
  
+____________________________________________________________________________________________________________________
+ references: https://dev.to/kunaal438/how-to-create-netflix-clone-netflix-clone-with-hmtl-css-js-989
 
