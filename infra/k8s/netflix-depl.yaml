@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netlix-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: netlix
+  template:
+    metadata:
+      labels:
+        app: netlix
+    spec:
+      containers:
+        - name: netlix
+          image: lokireg.azurecr.io/ticketing-netlix
+          env:
+            - name: key_id
+              value: "rzp_test_FMZYTOHk7LXFqe"
+            - name: key_secret
+              value: 'cWLlmhuukUopWroppNb5rC0s'
+            - name: secret
+              value: 'csddsdsdWLldsdsdsdsdsmhuukUopWroewweweppd2sNb5rdsdewesdC0s'
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: netlix-srv
+spec:
+  selector:
+    app: netlix
+  type: LoadBalancer
+  ports:
+    - name: netlix
+      protocol: TCP
+
+      port: 3000
+      targetPort: 3000
